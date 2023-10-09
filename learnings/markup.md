@@ -1,8 +1,8 @@
 ## 1. Structure a site using semantic HTML to aid accessibility
-- use specific names for elements, e.g. <h1> <section> <article>
-- ensure headers are in order (<h1> <h2> <h3>) and don't skip any
+- use specific names for elements, e.g. `<h1>` <section> <article>
+- ensure headers are in order (`<h1>` `<h2>` `<h3>`) and don't skip any
 - include different sections for the page (main, header, footer)
-- generic <div> or <span> only used for styling
+- generic `<div>` or `<span>` only used for styling
 ![Snip20231009_22](https://github.com/FAC29A/Frans-portfolio-of-learning/assets/124707247/3bd170df-b510-49e8-9482-b4ba90a3df60)
 
 ## 2. Ensure a web page is readable for screen readers

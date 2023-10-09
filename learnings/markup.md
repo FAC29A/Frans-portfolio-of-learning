@@ -3,13 +3,13 @@
 - ensure headers are in order (`<h1>` `<h2>` `<h3>`) and don't skip any
 - include different sections for the page (main, header, footer)
 - generic `<div>` or `<span>` only used for styling
-<img src="https://github.com/FAC29A/Frans-portfolio-of-learning/assets/124707247/3bd170df-b510-49e8-9482-b4ba90a3df60)" width="200">
-![Snip20231009_22](https://github.com/FAC29A/Frans-portfolio-of-learning/assets/124707247/3bd170df-b510-49e8-9482-b4ba90a3df60 =300x200)
+<img src="https://github.com/FAC29A/Frans-portfolio-of-learning/assets/124707247/3bd170df-b510-49e8-9482-b4ba90a3df60)" width="400">
 
 ## 2. Ensure a web page is readable for screen readers
 - Use semantic HTML
 - use <a> for links and <button> elements
 - Add a fieldset and legend to form radio inputs
+<img src="https://github.com/FAC29A/Frans-portfolio-of-learning/assets/124707247/96e7d3a5-0c27-4786-91df-25ecdc68b453" width="400">
 ![Snip20231009_25](https://github.com/FAC29A/Frans-portfolio-of-learning/assets/124707247/96e7d3a5-0c27-4786-91df-25ecdc68b453)
 
 ## 3. Ensure our UI has sufficient colour contrast so that everyone can perceive it comfortably

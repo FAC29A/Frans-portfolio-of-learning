@@ -1,7 +1,7 @@
 ## 1. Write code that executes asynchronously
 - Sometimes we don't want coe to execute straight away.
 - Can delay code using setTimeout and setInterval. Clear these using clearTimeout and clearInterval:
-<img src="https://github.com/FAC29A/Frans-portfolio-of-learning/assets/124707247/598bf818-0553-4cd8-977a-0f34b486372c" width="200" height="auto" alt="setTimeout")>
+<img src="https://github.com/FAC29A/Frans-portfolio-of-learning/assets/124707247/598bf818-0553-4cd8-977a-0f34b486372c" width="200" height="auto" alt="setTimeout">
 ![setInterval, clearInterval](https://github.com/FAC29A/Frans-portfolio-of-learning/assets/124707247/f92c6dec-c4a0-451d-89e7-83ad215232fc)
 
 - We can also use promises

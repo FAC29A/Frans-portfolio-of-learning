@@ -84,19 +84,19 @@ POST requests are used to send data to a server, often for creating or updating 
 
 **E.g.**
 **// POST request using fetch**
-**const postData = {
+const postData = {
   title: 'New Post',
   body: 'This is the content of the new post',
   userId: 1,
-};**
+};
 
 fetch('https://jsonplaceholder.typicode.com/posts', {
- **method: 'POST',
+method: 'POST',
   headers: {
     'Content-Type': 'application/json',
   },
   body: JSON.stringify(postData),
-})**
+})
   .then((response) => {
     if (!response.ok) {
       throw new Error('Network response was not ok');

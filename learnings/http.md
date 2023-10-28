@@ -45,9 +45,28 @@ asyncFunction1((result1) => {
 });
 ```
 ## 3. Use promises to access values that aren’t available synchronously
-**Readable and Chained Syntax:** Promises offer a more readable and sequential syntax. Instead of nesting callback functions, you can chain promises together using then(). This makes the code more linear and easier to follow, reducing the problem of "callback hell."
+**Readable and Chained Syntax:** Promises offer a more readable and sequential syntax. Instead of nesting callback functions, you can chain promises together using then(). This makes the code more linear and easier to follow, reducing the problem of **"callback hell":**
 
-<img src="https://github.com/FAC29A/Frans-portfolio-of-learning/assets/124707247/8d7a7f44-3c5a-4772-b70a-6d9809d612a1" width="400" height="auto" alt="Example of fetch">
+```
+// Define a function that fetches data from a remote server
+function fetchData(url, callback) {
+  fetch(url)
+    .then((response) => response.json())
+    .then((data) => callback(null, data))
+    .catch((error) => callback(error, null));
+}
+
+// Usage of the fetchData function with a callback
+const apiUrl = 'https://jsonplaceholder.typicode.com/posts/1';
+
+fetchData(apiUrl, (error, data) => {
+  if (error) {
+    console.error('Error:', error);
+  } else {
+    console.log('Data:', data);
+  }
+});
+```
 
 **Error Handling:** Promises have built-in error handling mechanisms through the .catch() method. With callbacks, you often need to manually handle errors within each callback function, making error handling less standardized and more error-prone.
 

@@ -26,6 +26,7 @@
 **Callback Hell**: Callback hell refers to the problem of deeply nested callbacks, which can make code difficult to read and maintain. To address this issue, it's often recommended to use alternatives like Promises or async/await, which provide cleaner and more structured ways to work with asynchronous code.
 
 **E.g.**
+```
 asyncFunction1((result1) => {
   // First asynchronous operation
   asyncFunction2(result1, (result2) => {
@@ -42,7 +43,7 @@ asyncFunction1((result1) => {
     });
   });
 });
-
+```
 ## 3. Use promises to access values that aren’t available synchronously
 **Readable and Chained Syntax:** Promises offer a more readable and sequential syntax. Instead of nesting callback functions, you can chain promises together using then(). This makes the code more linear and easier to follow, reducing the problem of "callback hell."
 
@@ -52,29 +53,30 @@ asyncFunction1((result1) => {
 
 ## 4. Use the fetch method to make HTTP requests and receive responses
 **// Define the URL for the Pokémon API**
+```
 const apiUrl = 'https://pokeapi.co/api/v2/pokemon/1'; // This example fetches data for Pokémon with ID 1 (Bulbasaur)
 
-**// Use the Fetch API to make a GET request to the API**
+// Use the Fetch API to make a GET request to the API
 fetch(apiUrl)
   .then((response) => {
-**//Handle errors- e.g. network error/404/429 etc**
+//Handle errors- e.g. network error/404/429 etc
     if (!response.ok) {
       throw new Error('Network response was not ok');
     }
-**// Parse the response as JSON**
+// Parse the response as JSON
     return response.json(); 
   })
   .then((data) => {
-**// Data contains information about the Pokémon**
+// Data contains information about the Pokémon
     console.log('Pokémon Name:', data.name);
     console.log('Abilities:', data.abilities.map((ability) => ability.ability.name).join(', '));
     console.log('Types:', data.types.map((type) => type.type.name).join(', '));
   })
-**// Catch any errors so the rest of the code can still run**
+// Catch any errors so the rest of the code can still run
   .catch((error) => {
     console.error('Error:', error);
   });
-
+```
 ## 5. Configure the options argument of the fetch method to make GET and POST requests
 **GET Requests:**
 GET requests are used to retrieve data from a server. When using the fetch method for GET requests, the default behaviour is to make a GET request, so you don't need to specify the HTTP method explicitly. (See fetch above)
@@ -84,6 +86,7 @@ POST requests are used to send data to a server, often for creating or updating 
 
 **E.g.**
 **// POST request using fetch**
+```
 const postData = {
   title: 'New Post',
   body: 'This is the content of the new post',
@@ -109,20 +112,24 @@ method: 'POST',
   .catch((error) => {
     console.error('Error:', error);
   });
-
+```
 ## 6. Use the map array method to create a new array containing new values
 **// Create a new array by doubling each element of the original array**
+```
 const originalArray = [1, 2, 3, 4, 5];
 const doubledArray = originalArray.map((value) => value * 2);
-console.log(doubledArray); 
+console.log(doubledArray);
+```
 **// Output: [2, 4, 6, 8, 10]**
 
 
 ## 7. Use the filter array method to create a new array with certain values removed
 **// Create a new array by removing even numbers from the original array**
+```
 const originalArray = [1, 2, 3, 4, 5, 6];
 const filteredArray = originalArray.filter((value) => value % 2 !== 0);
-console.log(filteredArray); 
+console.log(filteredArray);
+```
 **// Output: [1, 3, 5]**
 
 
@@ -140,6 +147,7 @@ A DOM node, is an individual element or part of a web page's structure as repres
 **Document Node:** The top-level node in the DOM hierarchy is the document node, representing the entire HTML document. It serves as the entry point for accessing and manipulating the content of the web page.
 
 **E.g.**
+```
 <!DOCTYPE html>
 <html>
 <head>
@@ -155,31 +163,38 @@ A DOM node, is an individual element or part of a web page's structure as repres
   <div data-role="content">This is a div with custom data attribute</div>
 </body>
 </html>
-
+```
 **Selecting by ID:**
+```
 const titleElement = document.getElementById('title');
 console.log(titleElement.textContent); // Output: "Hello, World!"
-
+```
 **Selecting by Class:**
+```
 const items = document.getElementsByClassName('item');
 for (const item of items) {
   console.log(item.textContent); // Output: "Item 1", "Item 2", "Item 3"
 }
-
+```
 **Selecting by Tag Name:**
+```
 const listItems = document.getElementsByTagName('li');
 for (const listItem of listItems) {
   console.log(listItem.textContent); // Output: "Item 1", "Item 2", "Item 3"
 }
+```
 
 **Selecting by Custom Data Attribute:**
+```
 const contentElement = document.querySelector('[data-role="content"]');
 console.log(contentElement.textContent); // Output: "This is a div with custom data attribute"
+```
 
 ## 9. Add and remove DOM nodes to change the content on the page
 **Adding DOM Nodes:**
 
 **Adding a New Paragraph:**
+```
 // Create a new paragraph element
 const newParagraph = document.createElement('p');
 newParagraph.textContent = 'This is a new paragraph.';
@@ -187,8 +202,10 @@ newParagraph.textContent = 'This is a new paragraph.';
 // Add the new paragraph to the document
 document.body.appendChild(newParagraph);
 _This code creates a new <p> element, sets its text content, and appends it to the document's <body>, adding a new paragraph to the page._
+```
 
 **Inserting an Element Before Another:**
+```
 // Create a new div element
 const newDiv = document.createElement('div');
 newDiv.textContent = 'I come before the existing div.';
@@ -199,10 +216,11 @@ const existingDiv = document.querySelector('.existing-div');
 // Insert the new div before the existing div
 existingDiv.parentNode.insertBefore(newDiv, existingDiv);
 In this example, a new <div> is created and inserted before an existing <div> on the page.
-
+```
 **Removing DOM Nodes:**
 
 **Removing an Element:**
+```
 // Reference the element to remove
 const elementToRemove = document.getElementById('element-to-remove');
 
@@ -218,6 +236,7 @@ const parentElement = document.querySelector('.parent-element');
 while (parentElement.firstChild) {
   parentElement.removeChild(parentElement.firstChild);
 }
+```
 _This example removes all child elements from a specified parent element._
 
 ## 10. Toggle the classes applied to DOM nodes to change their CSS properties
@@ -226,15 +245,18 @@ Certainly! Here are examples of toggling classes applied to DOM nodes to change 
 **Toggling Classes**:
 
 1. **Toggle Class with JavaScript**:
+```
    // Find the element you want to toggle a class on
    const element = document.getElementById('my-element');
 
    // Toggle a class on the element
    element.classList.toggle('active');
-   ```
+```
+
    In this example, we find an element by its ID and toggle the class "active" on that element. This can be used, for example, to change the appearance of an element when a button is clicked.
 
-2. **Toggle Class with Event Listeners**:
+3. **Toggle Class with Event Listeners**:
+```
    html:
    <button id="toggle-button">Toggle Class</button>
    <div id="element-to-toggle">This is a div element.</div>
@@ -247,7 +269,7 @@ Certainly! Here are examples of toggling classes applied to DOM nodes to change 
    **toggleButton.addEventListener('click', () => {
      elementToToggle.classList.toggle('highlight');
    });**
-   
+```
 In this example, a button and a div element are defined in the HTML. When the button is clicked, it adds or removes the "highlight" class from the div, toggling its appearance.
 
 _**Can use this instead of elementToToggle.classList.add('highlight')/remove('highlight')**_
@@ -256,16 +278,18 @@ _**Can use this instead of elementToToggle.classList.add('highlight')/remove('hi
 
 Here's an example of how you can use toggled classes to change CSS properties, such as background color:
 css:
+```
 /* CSS */
 .highlight {
   background-color: yellow;
 }
-
+```
 By toggling the "highlight" class on an element, you can dynamically change its background color to yellow. You can apply this principle to various CSS properties, creating interactive and responsive web designs.
 
 ## 11. Use consistent layout and spacing
 Use same stylesheet and layout across site.
 **CSS variables:**
+```
 :root {
   --primary-color: #007bff;
   --font-family: 'Arial', sans-serif;
@@ -278,9 +302,10 @@ button {
   margin: var(--spacing-unit);
   padding: var(--spacing-unit * 2);
 }
-
+```
 
 **Stacking:**
+```
 .stack-sm > * + * {
   margin-top: 0.5rem;
 }
@@ -293,8 +318,9 @@ button {
 .stack-xl > * + * {
   margin-top: 4rem;
 }
-
+```
 **Modifier Classes:**
+```
 .center {
   max-width: 30rem;
   margin-left: auto;
@@ -309,16 +335,18 @@ button {
 .width-xl {
   max-width: 60rem;
 }
-
+```
 ## 12. Follow a spacing guideline to give our app a consistent feel
 Consistency in spacing is a fundamental aspect of web design, ensuring that your app or website looks polished and professional. Spacing guidelines help maintain a uniform layout. Here's an example of a simple spacing guideline in CSS:
 
 **Defining spacing variables**
+```
 :root {
   --spacing-unit: 1rem;
 }
-
+```
 **Applying the guideline**
+```
 .container {
   margin: var(--spacing-unit);
   padding: var(--spacing-unit * 2);
@@ -327,6 +355,7 @@ Consistency in spacing is a fundamental aspect of web design, ensuring that your
 .button {
   margin: 0 var(--spacing-unit);
 }
+```
 In this example, we define a CSS variable --spacing-unit that represents a base spacing unit. We then apply this spacing unit consistently across the design to ensure that margins and padding are uniform. 
 
 ## 13. Debug client side JS in our web browser
@@ -340,6 +369,7 @@ Console Errors: Check the Console tab for error messages and use console.log() t
 The console.log() method is a developer's best friend when it comes to debugging JavaScript. It allows you to print information and variables to the browser console for analysis. 
 
 **E.g.**
+```
 function divide(a, b) {
   if (b === 0) {
     console.error("Division by zero is not allowed.");
@@ -351,5 +381,5 @@ function divide(a, b) {
 
 const result = divide(10, 2);
 console.log(`Result: ${result}`);
-
+```
 In this example, we use console.log() to print messages and variable values, which helps us track the code's flow and identify potential issues. Additionally, we use console.error() to report errors, making debugging more efficient.

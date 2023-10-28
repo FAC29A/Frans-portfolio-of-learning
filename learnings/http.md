@@ -138,11 +138,11 @@ A DOM node, is an individual element or part of a web page's structure as repres
 
 **In the context of the DOM:**
 
-**Element Nodes:** DOM nodes can represent HTML elements like headings (&lt;<h1>&gt;, `<div>`), paragraphs (<p>), lists (<ul>, <li>), forms (<form>, <input>), and more. Each of these elements is considered a DOM node.
+**Element Nodes:** DOM nodes can represent HTML elements like headings (`<h1>`;, `<div>`), paragraphs (`<p>`), lists (`<ul>`, `<li>`), forms (`<form>`, `<input>`), and more. Each of these elements is considered a DOM node.
 
 **Attribute Nodes:** The attributes of HTML elements (e.g., id, class, src, href) are also represented as nodes in the DOM. They are typically accessible through the element nodes.
 
-**Text Nodes:** The text content within HTML elements is represented by text nodes. For example, if you have a paragraph <p>Hello, World!</p>, the text "Hello, World!" is a text node.
+**Text Nodes:** The text content within HTML elements is represented by text nodes. For example, if you have a paragraph `<p>Hello, World!</p>`, the text "Hello, World!" is a text node.
 
 **Document Node:** The top-level node in the DOM hierarchy is the document node, representing the entire HTML document. It serves as the entry point for accessing and manipulating the content of the web page.
 

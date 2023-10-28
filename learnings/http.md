@@ -1,14 +1,17 @@
 ## 1. Write code that executes asynchronously
 - Sometimes we don't want coe to execute straight away.
 - Can delay code using setTimeout and setInterval. Clear these using clearTimeout and clearInterval:
-<img src="https://github.com/FAC29A/Frans-portfolio-of-learning/assets/124707247/598bf818-0553-4cd8-977a-0f34b486372c" width="200" height="auto" alt="setTimeout">
-![setInterval, clearInterval](https://github.com/FAC29A/Frans-portfolio-of-learning/assets/124707247/f92c6dec-c4a0-451d-89e7-83ad215232fc)
+<img src="https://github.com/FAC29A/Frans-portfolio-of-learning/assets/124707247/598bf818-0553-4cd8-977a-0f34b486372c" width="400" height="auto" alt="setTimeout">
+<img src="https://github.com/FAC29A/Frans-portfolio-of-learning/assets/124707247/f92c6dec-c4a0-451d-89e7-83ad215232fc" width="400" height="auto" alt="setInterval, clearInterval">
+
 
 - We can also use promises
 - Promises and .then are useful if we are waiting for something to happen before we execute code (e.g. if fetching data from an API)
 - .then also avoids nesting nightmares!
-![then avoids nesting](https://github.com/FAC29A/Frans-portfolio-of-learning/assets/124707247/f22b77a7-3ea9-4fc9-bd37-527a6e869faf)
-![Promise .then](https://github.com/FAC29A/Frans-portfolio-of-learning/assets/124707247/7c559abf-92f9-4930-bc4b-e884e22905f1)
+
+  
+<img src="https://github.com/FAC29A/Frans-portfolio-of-learning/assets/124707247/f22b77a7-3ea9-4fc9-bd37-527a6e869faf" alt ="then avoids nesting" width="400" height="auto">
+<img src="https://github.com/FAC29A/Frans-portfolio-of-learning/assets/124707247/7c559abf-92f9-4930-bc4b-e884e22905f1" width="400" height="auto" alt="Promise .then()">
 
 ## 2. Use callbacks to access values that aren’t available synchronously
 
@@ -43,7 +46,7 @@ asyncFunction1((result1) => {
 ## 3. Use promises to access values that aren’t available synchronously
 **Readable and Chained Syntax:** Promises offer a more readable and sequential syntax. Instead of nesting callback functions, you can chain promises together using then(). This makes the code more linear and easier to follow, reducing the problem of "callback hell."
 
-![Example of fetch](https://github.com/FAC29A/Frans-portfolio-of-learning/assets/124707247/8d7a7f44-3c5a-4772-b70a-6d9809d612a1)
+<img src="https://github.com/FAC29A/Frans-portfolio-of-learning/assets/124707247/8d7a7f44-3c5a-4772-b70a-6d9809d612a1" width="400" height="auto" alt="Example of fetch">
 
 **Error Handling:** Promises have built-in error handling mechanisms through the .catch() method. With callbacks, you often need to manually handle errors within each callback function, making error handling less standardized and more error-prone.
 
